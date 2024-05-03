@@ -1,20 +1,26 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+You just passed from azure devops to Jira and have to copy and paste your entire backlog field by field ? 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Don't worry ! follow the readme !
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+It's not magic, but it save (some) time.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+The script will export the tickets to a csv file.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+# Configuring
+
+Fill the variable ITEMS_TO_EXPORT in config.py file with ids of azure items to extract.
+Any item will probably work (epic, feature, bug ...)
+
+change FILE_NAME_EXTRACT value to change the ... file name of the extract. 
+Don't forget to fill BASE_URL 
+
+# Installation process
+- Have python 3.7+ installed
+- `pip install venv`
+- `python -m venv venv`
+- `source /venv/bin/activate`
+- `pip install -r requirements.txt`
+- edit the config.py file to your needs.
+- `python azure_export.py` 
+- Wait (The export is slow).
